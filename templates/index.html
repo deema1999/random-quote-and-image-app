@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote and Image App</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <div id="quote">{{ quote }}</div>
+  <img id="image" src="{{ image_url }}" alt="Random Image">
+
+  <form method="get" id="quote-form">
+    <label for="category">Choose Quote Category:</label>
+    <input type="number" id="category" name="category" placeholder="Enter a category">
+    <button type="submit">Get Random Quote</button>
+  </form>
+
+  <form method="get" id="image-form">
+    <input type="checkbox" id="grayscale" name="grayscale">
+    <label for="grayscale">Grayscale Image</label>
+    <button type="submit">Get Random Image</button>
+  </form>
+</body>
+
+</html>
