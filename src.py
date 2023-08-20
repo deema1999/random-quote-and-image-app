@@ -19,8 +19,8 @@ def get_random_quote_text(category=None):
         if category:
             params["key"] = category
         else:
-            # Added a random key
-            params["key"] = random.randint(1, 999999)
+            # Added a random 6-digits key
+            params["key"] = random.randrange(111111, 999999, 6)
 
         response = requests.post(FORISMATIC_API_URL, params=params)
         data = response.json()
